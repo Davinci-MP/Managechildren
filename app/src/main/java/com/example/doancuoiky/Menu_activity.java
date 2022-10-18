@@ -1,11 +1,13 @@
 package com.example.doancuoiky;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.doancuoiky.Dialog.NewClassDialog;
+import com.example.doancuoiky.activity.ListClassesActivity;
 
 public class Menu_activity extends AppCompatActivity implements View.OnClickListener {
 
@@ -23,6 +25,8 @@ public class Menu_activity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btView:
+                Intent intent = new Intent(this, ListClassesActivity.class);
+                startActivity(intent);
 //                Toast.makeText(this,"Xem Danh Sach",Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btReg:
