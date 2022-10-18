@@ -10,6 +10,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 
 import com.example.doancuoiky.R;
+import com.example.doancuoiky.model.Classes;
+import com.example.doancuoiky.sqlite.ClassesDAO;
 
 public class NewClassDialog extends Dialog implements View.OnClickListener{
     private Context context;
@@ -34,6 +36,9 @@ public class NewClassDialog extends Dialog implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         switch (view.getId()){
+            Classes cls = new Classes();
+            cls.setName(etName.getText(),toString());
+            ClassesDAO dao = new ClassesDAO(this);
             case R.id.btSave:
                 Toast.makeText(context,"Khu Phố Đã Được Lưu",Toast.LENGTH_SHORT).show();
             break;
