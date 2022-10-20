@@ -1,10 +1,13 @@
 package com.example.doancuoiky.adapter;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
+import com.example.doancuoiky.R;
 import com.example.doancuoiky.model.Classes;
 
 import java.util.List;
@@ -35,6 +38,16 @@ public class ClassesAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
+        if (view == null) {
+            view = LayoutInflater.from(context).inflate(R.layout.layout_classes_item, null);
+
+        }
+            TextView tvId = view.findViewById(R.id.tvClassId);
+            TextView tvName = view.findViewById(R.id.tvName);
+
+            Classes cls = list.get(i);
+            tvId.setText("" + cls.getId());
+            tvName.setText(cls.getName());
         return null;
     }
 }

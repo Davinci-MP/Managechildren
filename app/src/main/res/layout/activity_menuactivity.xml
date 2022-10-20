@@ -35,7 +35,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btLogin"
+            android:id="@+id/btReg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -65,7 +65,7 @@
             android:text="Thêm người dùng" />
 
         <Button
-            android:id="@+id/btExist"
+            android:id="@+id/btLogout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

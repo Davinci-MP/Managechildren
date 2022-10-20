@@ -17,9 +17,9 @@ public class Menu_activity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menuactivity);
         findViewById(R.id.btView).setOnClickListener(this);
-        findViewById(R.id.btLogin).setOnClickListener(this);
+        findViewById(R.id.btReg).setOnClickListener(this);
         findViewById(R.id.btAddUser).setOnClickListener(this);
-        findViewById(R.id.btExist).setOnClickListener(this);
+        findViewById(R.id.btLogout).setOnClickListener(this);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class Menu_activity extends AppCompatActivity implements View.OnClickList
                 Toast.makeText(this,"Xem Danh Sach",Toast.LENGTH_SHORT).show();
 
                 break;
-            case R.id.btLogin:
+            case R.id.btReg:
 
 
                 NewClassDialog dialog = new NewClassDialog(this);
@@ -42,7 +42,7 @@ public class Menu_activity extends AppCompatActivity implements View.OnClickList
                 break;
             case R.id.btAddUser:
                 break;
-            case R.id.btExist:
+            case R.id.btLogout:
                 break;
         }
     }
