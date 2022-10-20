@@ -54,14 +54,14 @@
         android:text="Ghi nhớ" />
 
     <Button
-        android:id="@+id/btReg"
+        android:id="@+id/btLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:text="Đăng Nhập" />
 
     <Button
-        android:id="@+id/btlogin"
+        android:id="@+id/btSignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"

@@ -40,7 +40,7 @@ public class NewClassDialog extends Dialog implements View.OnClickListener{
 
             case R.id.btSave:
                 Classes cls = new Classes();
-                //cls.setName(etNa.getText().toString());
+                cls.setName(etTO.getText().toString());
                 ClassesDAO dao = new ClassesDAO(context);
                 dao.insert(cls);
                 Toast.makeText(context,"Khu Phố Đã Được Lưu",Toast.LENGTH_SHORT).show();
