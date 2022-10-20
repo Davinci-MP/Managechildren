@@ -4,7 +4,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class DbHelper extends SQLiteOpenHelper {
@@ -17,22 +16,23 @@ public class DbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
         String classSql = "CREATE TABLE classes(id integer primary key autoincrement," + "name  text not null)";
         String studdentSql = "CREATE TABLE students( id text primary key," + "name text not null, classid integer, dob text,"+"FOREIGN KEY (classid) REFERENCES classes(id)) ";
-        SQLiteDatabase.execSQL(classSql);
-        SQLiteDatabase.execSQL(studdentSql);
+        db.execSQL(classSql);
+        db.execSQL(studdentSql);
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        String classesSql = "DROP TABLE IF EXIST classes";
-        String studentSql = "DROP TABLE IF EXIST students";
+        String classesSql = "DROP TABLE IF EXISTS classes";
+        String studentSql = "DROP TABLE IF EXISTS students";
 
-        SQLiteDatabase.execSQL(studentSql);
-        SQLiteDatabase.execSQL(classesSql);
+        db.execSQL(studentSql);
+        db.execSQL(classesSql);
 
-        onCreate(SQLiteDatabase);
+        onCreate(db);
 
     }
 }

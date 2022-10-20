@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.doancuoiky.Dialog.NewClassDialog;
 import com.example.doancuoiky.model.Classes;
 
 public class ClassesDAO {
@@ -14,6 +15,10 @@ public class ClassesDAO {
         this.db = helper.getWritableDatabase();
 
     }
+
+    public ClassesDAO(NewClassDialog newClassDialog) {
+    }
+
     public long insert(Classes emp){
         ContentValues values = new ContentValues();
         values.put("id",emp.getId());

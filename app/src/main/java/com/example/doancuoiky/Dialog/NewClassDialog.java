@@ -29,6 +29,7 @@ public class NewClassDialog extends Dialog implements View.OnClickListener{
         etKP = findViewById(R.id.etKP);
         etTO = findViewById(R.id.etTO);
 
+
         findViewById(R.id.btSave).setOnClickListener(this);
         findViewById(R.id.btClose).setOnClickListener(this);
     }
@@ -36,10 +37,12 @@ public class NewClassDialog extends Dialog implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            Classes cls = new Classes();
-            cls.setName(etName.getText(),toString());
-            ClassesDAO dao = new ClassesDAO(this);
+
             case R.id.btSave:
+                Classes cls = new Classes();
+                //cls.setName(etNa.getText().toString());
+                ClassesDAO dao = new ClassesDAO(context);
+                dao.insert(cls);
                 Toast.makeText(context,"Khu Phố Đã Được Lưu",Toast.LENGTH_SHORT).show();
             break;
 
