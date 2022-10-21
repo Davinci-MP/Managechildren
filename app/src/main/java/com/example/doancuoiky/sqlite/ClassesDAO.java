@@ -42,7 +42,7 @@ public class ClassesDAO {
         while (cursor.moveToNext()){
             Classes cls = new Classes();
             cls.setId(cursor.getInt((cursor.getColumnIndex("id"))));
-            cls.setName(cursor.getString(cursor.getColumnIndex("s")));
+            cls.setName(cursor.getString(cursor.getColumnIndex("name")));
             list.add(cls);
         }
         return list;

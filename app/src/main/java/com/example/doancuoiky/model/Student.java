@@ -6,13 +6,13 @@ public class Student {
     private String id;
     private String name;
     private Date dob;
-    private int classID;
+    private int classId;
 
     public Student(String id, String name, Date dob, int classID) {
         this.id = id;
         this.name = name;
         this.dob = dob;
-        this.classID = classID;
+        this.classId = classID;
     }
 
     public Student() {
@@ -43,10 +43,10 @@ public class Student {
     }
 
     public int getClassID() {
-        return classID;
+        return classId;
     }
 
     public void setClassID(int classID) {
-        this.classID = classID;
+        this.classId = classID;
     }
 }

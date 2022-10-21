@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.doancuoiky.Dialog.NewClassDialog;
+import com.example.doancuoiky.activity.ListClassesActivity;
 import com.example.doancuoiky.activity.ManageStudentsActivity;
 
 public class Menu_activity extends AppCompatActivity implements View.OnClickListener {
@@ -16,31 +17,33 @@ public class Menu_activity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menuactivity);
-        findViewById(R.id.btView).setOnClickListener(this);
-        findViewById(R.id.btReg).setOnClickListener(this);
-        findViewById(R.id.btAddUser).setOnClickListener(this);
+        findViewById(R.id.btnListClasses).setOnClickListener(this);
+        findViewById(R.id.btnNewClass).setOnClickListener(this);
+        findViewById(R.id.btnManageStudents).setOnClickListener(this);
         findViewById(R.id.btLogout).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btView:
-//                Intent intent = new Intent(this, ListClassesActivity.class);
-//                startActivity(intent);
-                Intent mngintent = new Intent(this, ManageStudentsActivity.class);
-                startActivity(mngintent);
-                Toast.makeText(this,"Xem Danh Sach",Toast.LENGTH_SHORT).show();
 
-                break;
-            case R.id.btReg:
+            case R.id.btnNewClass:
 
 
                 NewClassDialog dialog = new NewClassDialog(this);
                 dialog.show();
 
                 break;
-            case R.id.btAddUser:
+            case R.id.btnListClasses:
+                Intent intent = new Intent(this, ListClassesActivity.class);
+                startActivity(intent);
+
+//                Toast.makeText(this,"Xem Danh Sach",Toast.LENGTH_SHORT).show();
+
+                break;
+            case R.id.btnManageStudents:
+                Intent mngintent = new Intent(this, ManageStudentsActivity.class);
+                startActivity(mngintent);
                 break;
             case R.id.btLogout:
                 break;

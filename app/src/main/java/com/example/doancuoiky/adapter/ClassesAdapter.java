@@ -48,6 +48,6 @@ public class ClassesAdapter extends BaseAdapter {
             Classes cls = list.get(i);
             tvId.setText("" + cls.getId());
             tvName.setText(cls.getName());
-        return null;
+        return view;
     }
 }

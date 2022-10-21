@@ -4,14 +4,14 @@ public class Classes {
     private Integer id;
     private String name;
 
+
+
+    public Classes() {
+    }
     public Classes(Integer id, String name) {
         this.id = id;
         this.name = name;
     }
-
-    public Classes() {
-    }
-
     public Integer getId() {
         return id;
     }

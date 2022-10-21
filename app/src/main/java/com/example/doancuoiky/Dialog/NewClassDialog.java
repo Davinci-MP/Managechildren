@@ -44,6 +44,7 @@ public class NewClassDialog extends Dialog implements View.OnClickListener{
                 ClassesDAO dao = new ClassesDAO(context);
                 dao.insert(cls);
                 Toast.makeText(context,"Khu Phố Đã Được Lưu",Toast.LENGTH_SHORT).show();
+                dismiss();
             break;
 
             case R.id.btClose:
